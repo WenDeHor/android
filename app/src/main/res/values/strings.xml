@@ -5,5 +5,6 @@
     <string name="distance">Distance</string>
     <string name="velocity">Velocity</string>
     <string name="users">GET USERS</string>
+    <string name="image_name">Image</string>
 
 </resources>
