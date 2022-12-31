@@ -10,11 +10,21 @@ import android.os.Build;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.core.app.ActivityCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import com.example.flipmeet.adapter.CategoryAdapter;
+import com.example.flipmeet.adapter.CourseAdapter;
+import com.example.flipmeet.db.LocListenerInterface;
+import com.example.flipmeet.db.MyLocListener;
+import com.example.flipmeet.model.Category;
+import com.example.flipmeet.model.Course;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements LocListenerInterface {
     private Button act_change;
@@ -35,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements LocListenerInterf
         addListenerOnButtonSearch();
         addListenerOnButtonMap();
         init();
+        addListenerOnButtonCourse();
     }
 
     private void init() {
@@ -110,6 +121,19 @@ public class MainActivity extends AppCompatActivity implements LocListenerInterf
                     @Override
                     public void onClick(View view) {
                         Intent toMap = new Intent(".MapActivity");
+                        startActivity(toMap);
+                    }
+                }
+        );
+    }
+
+    private void addListenerOnButtonCourse() {
+        act_change = (Button) findViewById(R.id.activity_course);
+        act_change.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent toMap = new Intent(".CourseActivity");
                         startActivity(toMap);
                     }
                 }

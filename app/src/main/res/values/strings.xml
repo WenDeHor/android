@@ -2,9 +2,20 @@
     <string name="app_name">Flip meet</string>
     <string name="page_search">Search</string>
     <string name="page_map">Map</string>
+    <string name="page_courses">Course</string>
     <string name="distance">Distance</string>
     <string name="velocity">Velocity</string>
     <string name="users">GET USERS</string>
     <string name="image_name">Image</string>
+
+    <string name="target_icon">Target</string>
+    <string name="contacts_text">Контакти</string>
+    <string name="about_text">Про нас</string>
+    <string name="main_text">Головна</string>
+    <string name="my_text">My</string>
+    <string name="home_text">Home</string>
+    <string name="course_start_date">Start date:</string>
+    <string name="course_level">Level:</string>
+    <string name="course_desc">Some text have interesting information about ua and technology our school.</string>
 
 </resources>

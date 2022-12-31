@@ -16,7 +16,6 @@
             app:layout_constraintTop_toTopOf="parent"
             android:background="@color/colorPrimaryDark"
             android:textSize="10pt"
-            android:layout_marginStart="24dp"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,8 +30,22 @@
             android:background="@color/colorPrimaryDark"
             android:textSize="10pt"
             app:layout_constraintStart_toEndOf="@+id/activity_search"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="8dp"
             app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+            android:id="@+id/activity_course"
+            android:text="@string/page_courses"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+
+
+            android:background="@color/colorPrimaryDark"
+            android:textSize="10pt"
+            app:layout_constraintStart_toEndOf="@+id/activity_map"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
     <TextView
             android:id="@+id/tvDistance"
             android:text="@string/distance"
@@ -47,7 +60,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
 
-    />
+            android:fontFamily="@font/montserrat_bold"/>
     <TextView
             android:id="@+id/tvVelocity"
             android:text="@string/velocity"

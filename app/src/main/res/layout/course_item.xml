@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="wrap_content"
+                                                   android:layout_height="wrap_content"
+                                                   android:layout_marginEnd="20dp">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/courseBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:contentPaddingBottom="20dp"
+            tools:targetApi="lollipop">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:id="@+id/courseImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:transitionName="courseImage"
+                    app:srcCompat="@drawable/ic_java" />
+            <TextView
+                    android:id="@+id/courseTitle"
+                    android:text="@string/app_name"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="20sp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <TextView
+                        android:text="@string/course_start_date"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="147dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                />
+                <TextView
+                        android:text="@string/course_level"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_width="139dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent">
+                <TextView
+                        android:id="@+id/courseDate"
+                        android:text="@string/app_name"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="148dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                />
+                <TextView
+                        android:id="@+id/courseLevel"
+                        android:text="@string/app_name"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_width="145dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

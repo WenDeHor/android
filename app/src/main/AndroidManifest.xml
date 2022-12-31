@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.flipmeet">
     <!-- Old version of phone -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
             android:allowBackup="true"
@@ -17,7 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity android:name=".ActivitySearch">
             <intent-filter>
                 <action android:name=".ActivitySearch"/>
@@ -25,7 +26,6 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-
         <activity android:name=".MapActivity">
             <intent-filter>
                 <action android:name=".MapActivity"/>
@@ -34,6 +34,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".CourseActivity">
+            <intent-filter>
+                <action android:name=".CourseActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
     </application>
 
 </manifest>

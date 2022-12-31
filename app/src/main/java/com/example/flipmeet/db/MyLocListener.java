@@ -1,8 +1,9 @@
-package com.example.flipmeet;
+package com.example.flipmeet.db;
 
 import android.location.Location;
 import android.location.LocationListener;
 import android.os.Bundle;
+import com.example.flipmeet.db.LocListenerInterface;
 
 public class MyLocListener implements LocationListener {
     private LocListenerInterface locListenerInterface;

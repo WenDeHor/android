@@ -1,4 +1,4 @@
-package com.example.flipmeet;
+package com.example.flipmeet.db;
 
 import android.location.Location;
 
