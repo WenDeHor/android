@@ -16,6 +16,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.flipmeet.CourseActivity;
+import com.example.flipmeet.CoursePage;
 import com.example.flipmeet.R;
 import com.example.flipmeet.model.Course;
 
@@ -63,7 +64,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
     private void onClickCourse(@NonNull CourseViewHolder holder, int position, int parseColor, int imageId) {
         //button
         holder.itemView.setOnClickListener(view -> {
-            Intent intent = new Intent(context, CourseActivity.class);
+            Intent intent = new Intent(context, CoursePage.class);
             //transition
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(
                     (Activity) context,
