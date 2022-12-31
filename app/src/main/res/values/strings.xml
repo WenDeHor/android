@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Flip meet</string>
     <string name="page_search">Search</string>
+    <string name="page_map">Map</string>
     <string name="distance">Distance</string>
     <string name="velocity">Velocity</string>
     <string name="users">GET USERS</string>

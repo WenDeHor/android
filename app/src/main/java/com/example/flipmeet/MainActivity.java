@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity implements LocListenerInterf
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        addListenerOnButton();
+        addListenerOnButtonSearch();
+        addListenerOnButtonMap();
         init();
     }
 
@@ -89,13 +90,26 @@ public class MainActivity extends AppCompatActivity implements LocListenerInterf
     }
 
 
-    public void addListenerOnButton() {
+    private void addListenerOnButtonSearch() {
         act_change = (Button) findViewById(R.id.activity_search);
         act_change.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Intent toMap = new Intent(".ActivitySearch");
+                        startActivity(toMap);
+                    }
+                }
+        );
+    }
+
+    private void addListenerOnButtonMap() {
+        act_change = (Button) findViewById(R.id.activity_map);
+        act_change.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent toMap = new Intent(".MapActivity");
                         startActivity(toMap);
                     }
                 }
