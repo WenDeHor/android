@@ -7,10 +7,8 @@ import android.widget.ExpandableListView;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class MapActivity extends AppCompatActivity {
     private static final String NAME = "NAME";
@@ -18,7 +16,10 @@ public class MapActivity extends AppCompatActivity {
     private SimpleExpandableListAdapter mAdapter;
     ExpandableListView simpleExpandableListView;
     // string arrays for group and child items
-    private String groupItems[] = {"Animals", "Birds"};
+    private List<String> groupItems = new ArrayList<String>() {{
+        add("Animals");
+        add("Birds");
+    }};
     private String[][] childItems = {{"Dog", "Cat", "Tiger"}, {"Crow", "Sparrow"}};
 
     @Override
@@ -28,27 +29,28 @@ public class MapActivity extends AppCompatActivity {
         //  initiate the expandable list view
         simpleExpandableListView = (ExpandableListView) findViewById(R.id.simpleExpandableListView);
         // create lists for group and child items
-        List<Map<String, String>> groupData = new ArrayList<Map<String, String>>();
-        List<List<Map<String, String>>> childData = new ArrayList<List<Map<String, String>>>();
+        List<Map<String, String>> groupData = new ArrayList<>();
+        List<List<Map<String, String>>> childData = new ArrayList<>();
         // add data in group and child list
-        for (int i = 0; i < groupItems.length; i++) {
-            Map<String, String> curGroupMap = new HashMap<String, String>();
+        for (int i = 0; i < groupItems.size(); i++) {
+            Map<String, String> curGroupMap = new HashMap<>();
+            curGroupMap.put(NAME, groupItems.get(i));
             groupData.add(curGroupMap);
-            curGroupMap.put(NAME, groupItems[i]);
 
-            List<Map<String, String>> children = new ArrayList<Map<String, String>>();
+            List<Map<String, String>> children = new ArrayList<>();
+
             for (int j = 0; j < childItems[i].length; j++) {
-                Map<String, String> curChildMap = new HashMap<String, String>();
+                Map<String, String> curChildMap = new HashMap<>();
                 children.add(curChildMap);
                 curChildMap.put(NAME, childItems[i][j]);
             }
             childData.add(children);
         }
         // define arrays for displaying data in Expandable list view
-        String groupFrom[] = {NAME};
-        int groupTo[] = {R.id.heading};
-        String childFrom[] = {NAME};
-        int childTo[] = {R.id.childItem};
+        String[] groupFrom = {NAME};
+        int[] groupTo = {R.id.heading};
+        String[] childFrom = {NAME};
+        int[] childTo = {R.id.childItem};
 
 
         // Set up the adapter
@@ -65,7 +67,7 @@ public class MapActivity extends AppCompatActivity {
             public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
 
                 // display a toast with group name whenever a user clicks on a group item
-                Toast.makeText(getApplicationContext(), "Group Name Is :" + groupItems[groupPosition], Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Group Name Is :" + groupItems.get(groupPosition), Toast.LENGTH_LONG).show();
 
                 return false;
             }
