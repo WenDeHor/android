@@ -17,8 +17,8 @@ public class ActivitySearch extends AppCompatActivity {
 
     public void onClick(View view){
         SQLiteDatabase db = getBaseContext().openOrCreateDatabase("app.db", MODE_PRIVATE, null);
-        db.execSQL("CREATE TABLE IF NOT EXISTS users (name TEXT, age INTEGER, UNIQUE(name))");
-        db.execSQL("INSERT OR IGNORE INTO users VALUES ('Tom Smith', 23), ('John Dow', 31);");
+//        db.execSQL("CREATE TABLE IF NOT EXISTS users (name TEXT, age INTEGER, UNIQUE(name))");
+        db.execSQL("INSERT OR IGNORE INTO users VALUES ('Tom Smith2', 25), ('John Dow3', 45);");
 
         Cursor query = db.rawQuery("SELECT * FROM users;", null);
         TextView textView = findViewById(R.id.textView);
