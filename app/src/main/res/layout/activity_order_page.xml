@@ -5,8 +5,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        tools:context=".OrderPage"
         android:background="@color/white"
-        tools:context=".CourseActivity"
         app:layout_constraintDimensionRatio="3">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,7 +38,7 @@
                 android:layout_height="145dp"
                 android:rotation="270"
                 android:gravity="center"
-                android:fontFamily="@font/montserrat_bold"
+                android:fontFamily="@font/montserrat"
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toTopOf="@+id/about"
@@ -106,52 +106,13 @@
             android:layout_marginStart="20dp"
             android:scrollbarFadeDuration="250"
     />
-    <ImageView
-            android:id="@+id/itemHome"
-            app:srcCompat="@drawable/ic_homeapp"
-            android:contentDescription="@string/home_text"
-            app:layout_constraintTop_toBottomOf="@+id/textMy"
-            app:layout_constraintStart_toEndOf="@+id/constraintLayout"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:scrollbarFadeDuration="250"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            tools:ignore="ImageContrastCheck"/>
-    <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/categoryRecycler"
+    <ListView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="@+id/itemHome"
-            app:layout_constraintTop_toTopOf="@+id/itemHome"
-            app:layout_constraintStart_toEndOf="@+id/itemHome"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="15dp"
-            tools:listitem="@layout/category_item"/>
-    <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:id="@+id/orders_list"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/itemHome"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="150dp"
-            android:id="@+id/courseRecycler"/>
-    <Button
-            android:text="@string/basket_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/basket_button"
-            android:backgroundTint="@color/colorPrimary"
-            android:onClick="openShoppingCart"
-
-            app:layout_constraintStart_toEndOf="@+id/constraintLayout"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/courseRecycler" app:layout_constraintEnd_toEndOf="parent"
-    />
-
+            app:layout_constraintTop_toBottomOf="@+id/textHome"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

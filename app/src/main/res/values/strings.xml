@@ -17,5 +17,6 @@
     <string name="course_start_date">Start date:</string>
     <string name="course_level">Level:</string>
     <string name="course_desc">Some text have interesting information about ua and technology our school.</string>
+    <string name="basket_button">Basket</string>
 
 </resources>

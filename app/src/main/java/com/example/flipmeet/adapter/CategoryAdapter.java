@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import com.example.flipmeet.CourseActivity;
+import com.example.flipmeet.MainActivity;
 import com.example.flipmeet.model.Category;
 import com.example.flipmeet.R;
 
@@ -32,6 +34,12 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     @Override
     public void onBindViewHolder(@NonNull CategoryAdapter.CategoryViewHolder holder, int position) {
         holder.categoryTitle.setText(categories.get(position).getTitle());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CourseActivity.showCoursesByCategory(categories.get(position).getId());
+            }
+        });
     }
 
     @Override
@@ -39,7 +47,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         return categories.size();
     }
 
-    public static final class CategoryViewHolder extends RecyclerView.ViewHolder {
+    public static class CategoryViewHolder extends RecyclerView.ViewHolder {
         TextView categoryTitle;
 
         public CategoryViewHolder(@NonNull View itemView) {

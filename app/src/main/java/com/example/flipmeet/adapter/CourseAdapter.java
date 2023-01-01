@@ -30,6 +30,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
     public static final String COURSE_DATE = "courseDate";
     public static final String COURSE_LEVEL = "courseLevel";
     public static final String COURSE_TEXT = "courseText";
+    public static final String COURSE_ID = "courseId";
 
     Context context;
     List<Course> courses;
@@ -76,6 +77,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
             intent.putExtra(COURSE_DATE, courses.get(position).getDate());
             intent.putExtra(COURSE_LEVEL, courses.get(position).getLevel());
             intent.putExtra(COURSE_TEXT, courses.get(position).getText());
+            intent.putExtra(COURSE_ID, courses.get(position).getId());
 
             context.startActivity(intent, options.toBundle());
         });
